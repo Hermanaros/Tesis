@@ -1,0 +1,1091 @@
+---
+title: "Consultoria Estadística II_Entrega_avance"
+author: "Herman Aros"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+# Planteamiento del problema
+
+Dada la alta desconfianza que presenta la sociedad chilena, es importante revisar cuáles son los factores que tienden a incidir en el aumento o disminución de esta, sobretodo considerando la elevada fragmentación social y falta de participación política. Es importante estudiar esto, ya que la falta de confianza tiene un efecto negativo en los procesos democráticos y cívicos.En este sentido, existen 5 factores importantes comprender poruqe es relevante estudiar la confianza:
+
+1.Cohesión social: la confianza generalizada se refiere al nivel de confianza que las personas tienen en otras personas que no conocen personalmente. Refleja el grado en que las personas creen que los demás actuarán de manera confiable y cumplirán con sus obligaciones. Altos niveles de confianza generalizada están asociados con una mayor cohesión social y cooperación dentro de las comunidades. Cuando las personas confían en los demás, es más probable que participen en relaciones recíprocas, colaboren y contribuyan al bienestar de sus comunidades.
+
+2. Capital social: la confianza es un componente crucial del capital social, que se refiere a los recursos integrados en las relaciones y redes sociales. La confianza generalizada contribuye a la formación de capital social al fomentar las conexiones sociales, facilitar la cooperación y reducir los costos de transacción. En sociedades con altos niveles de confianza generalizada, es más probable que las personas participen en actividades que construyan redes sociales, como el voluntariado, la participación en organizaciones comunitarias y la participación en actividades cívicas.
+
+3. Desempeño institucional: la confianza generalizada tiene implicaciones para el funcionamiento de las instituciones y los sistemas sociales. La confianza en las instituciones, como el gobierno, el poder judicial y el mercado, es clave para que estas funcionen de forma adecuada. Cuando las personas confían en las instituciones, es más probable que cumplan con las leyes y los reglamentos, participen en los procesos públicos de toma de decisiones y tengan confianza en la justicia y la integridad de los sistemas sociales. Altos niveles de confianza generalizada pueden contribuir a la estabilidad, eficiencia y legitimidad de las instituciones.
+
+4. Integración Social y Diversidad: Estudiar la confianza generalizada nos ayuda a comprender la dinámica de la integración social y el impacto de la diversidad en la cohesión social. La confianza juega un papel crucial en entender las divisiones sociales y fomentar interacciones positivas entre personas de diferentes orígenes sociales, incluidos diferentes grupos étnicos, raciales o religiosos. Explorar los patrones de confianza entre diversas poblaciones puede proporcionar información sobre los desafíos y oportunidades asociados con las sociedades multiculturales.
+
+5. Bienestar y calidad de vida: la confianza generalizada se asocia con varios resultados individuales y sociales. La investigación ha demostrado que las personas que viven en sociedades con niveles más altos de confianza generalizada tienden a reportar niveles más altos de bienestar subjetivo, satisfacción con la vida y felicidad. Las relaciones de confianza y las conexiones sociales contribuyen a un sentido de pertenencia, apoyo social y resultados positivos para la salud mental.
+
+Por lo tanto, es relevante revisar si la participación en Asociaciones Voluntarias (como forma de expresión de la prticipación democrática y cívica) tiene alguna relación con la Confianza Generalizada en el actual contexto Chileno.
+Para lograr esto, se utilizarán las bases de datos de COES 2016 y 2018.
+
+## Contexto Chileno
+
+Las orientaciones de la política neoliberal fueron impuestas durante la dictadura y han guiado el desarrollo a largo plazo de la sociedad chilena.
+Durante los años setenta y ochenta, la dictadura chilena sistemáticamente destruyó los lazos de solidaridad a través de la represión de organizaciones sociales como por ejemplo los sindicatos, juntas vecinales, agrupación de estudiantes, etc.
+A su vez, esto permitió la desmantelación del apoyo institucional a través de la privatización de los servicios públicos, como por ejemplo el sistema de administración de pensiones, la educación y el sistema de salud. Se suman a estos hechos la represión política, lo cual permitió instaurar en nuestro país una ideología de logro individual que debilitó el tejido social de la sociedad chilena.
+Las asociaciones voluntarias en Chile no coinciden con las características que tienen en países Europeos o en Estados Unidos, ya que operan a menor escala, usualmente asociadas a algún vecindario y su financiamiento proviene de fondos gubernamentales con la intención de apoyar organizaciones sociales (Alenda & Sandoval, 2013), lo cual ha afectado la calidad de las asociaciones al estimular la competencia por recursos entre asociaciones. En este sentido, los líderes de las organizaciones han aprendido a competir con sus pares en vez de cooperar con ellos, lo que puede afectar los atributos cívicos de las asociaciones voluntarias. Sin embargo, es discutible hasta qué punto cumplen las cualidades que suelen estar asociadas con el capital social (Delamaza, 2002; Espinoza, 2013).
+
+En términos generales, la sociedad chilena muestra altos niveles de fragmentación y tendencias hacia una fuerte polarización (Neal, 2020). Esto es importante porque este tipo de configuraciones reduce la probabilidad de cooperación entre grupos a la vez que puede dañar otros mecanismo de integración, como por ejemplo, la extensión de la confianza más allá de los límites de la identidad local.
+Las organizaciones que alguna vez fueron predominantes en términos de intermediación social (demandas populares), como por ejemplo los sindicatos y los partidos políticos, se encuentran ubicados en posiciones periféricas con tendencias hacia la desconexión con otros tipos de asociaciones, especialmente aquellas con mayores raíces territoriales.  
+
+
+## ¿Por qué es importante estudiar las membresías en asociaciones voluntarias?
+
+Porque tienden a producir patrones de vínculos en torno a una estructura. Estos patrones de vínculos 
+pueden ser varias cosas, incluyendo personas, lugares, posiciones sociales, actividades y grupos. Pueden unir a las personas de manera activa (por ejemplo, la familia) o generar una restricción pasiva en torno a la interacción (por ejemplo, los vecindarios). A este concepto se le denominó **foci** (Feld, 1981)
+
+Por lo tanto, la membresía en asociaciones voluntarias son consideradas **foci** de actividad social que pueden afectar los patrones de interacción y formación de lazos no primarios. Esto tiene implicancias importantes para el desarrollo del capital social y para otros resultados, como por ejemplo, salud y cohesión.
+
+Al nivel grupal, los patrones de interacción entre asociaciones voluntarias constituye la formación de un campo intermedio de relaciones que afectan varios tipos de procesos, como los patrones de interacción estado-ciudadano y las dinámicas de conflicto y cohesión (tanto a nivel comunal como a nivel general)
+
+
+## Revisión literatura
+
+Existen dos efectos de las membresías (participación en asociaciones voluntarias) identificadas por los investigadores:
+
+-Asociaciones voluntarias como fuente de cohesión social: El primero y más conocido es que estos foci de actividad social pueden funcionar como escuelas cívicas, donde individuos y comunidades aprenden a lidiar con sus diferencias y conflictos, a la vez que expanden sus horizontes cognitivos y desarrollan un un sentido de tolerancia hacia otros extraños. (Putnam, 1994; Paxton, 2002, 2007; Glanville, 2016)
+
+-Asociaciones voluntarias como fuente de desigualdad: Otra líneas de investigación indica que la activación de lazos personales en estos contextos, aunque pueden estar motivados por similaridades pueden también permitir el acceso a círculos distantes de recursos no redundantes (Diani, 1997; Erickson, 2004; Benton, 2016; Tindall, et al. 2012; Son & Lin, 2008)
+
+### Contexto teórico 
+
+Tal como lo identificaron varios autores  (Popielarz, 1999; Cigler & Joslyn, 2002; Moody & White, 2003; Cornwell & Harrison, 2004; Paxton, 2002, 2007), es a través de la expansión de la red personal de los miembros a más de una organización que se crean redes entre las asociaciones voluntarias. Esto permite la transferencia de expectativas positivas desarrolladas dentro de la organización hacia otros, quienes pueden compartir los mismos intereses y en ciertas ocasiones ser aliados.
+
+En este sentido, el contexto de relaciones informales en las cuales las asociaciones se encuentran incrustadas, afectan el resultado de acciones organizacionales y  de quienes las componen.
+
+Asociaciones Instrumentales y Expresivas 
+Para los propósitos de esta investigación, nos enfocamos en la distinción analítica desarrollada por Lin (Lin, 2002) entre asociaciones instrumentales y expresivas. Esta distinción conceptual hace posible investigar procesos diferenciados de heterogeneidad interna y externa de los contextos organizacionales.
+
+La participación instrumental es una forma de acción racional, cuyo propósito va más allá de disfrutar de la mera participación. Por otro lado, la participación expresiva es una forma de  comportamiento racional afectivo porque constituye una recompensa en sí misma (Bekkers, Völker, Gaag, & Flap, 2008).
+
+**Asociaciones Instrumentales:**
+Glanville (2004) argumenta que las asociaciones instrumentales tienden a ser parte de una red grande y abierta con puentes hacia círculos sociales con acceso a diversos recursos.  Por otro lado, si un objetivo externo es la motivación para explicar la membresía, es decir, un objetivo que va más allá de la sociabilidad demostrada en el grupo, entonces, los miembros de dicho grupo tienen más inclinación a tolerar diferencias sociales y, eventualmente,  con otros grupos que podrían ser potenciales aliados. De esta manera, las asociaciones voluntarias instrumentales no solo son más diversas en términos de su composición interna, sino también lo son sus redes.
+
+**Asociaciones Expresivas:**
+Estas organizaciones usualmente son parte de una red densa y cerrada, lo cual puede bloquear el acceso a círculos distantes. Estas redes contribuyen a la cohesión y solidaridad en comunidades, pero su predominancia puede contribuir a la fragmentación de campos sociales más grandes. 
+Como la gran mayoría de las personas usualmente participan en asociaciones expresivas para socializar, los miembros de estos grupos  deberían ser socialmente más similares que los miembros de organizaciones instrumentales (Glanville, 2004),  lo cual puede resultar en menos exposición a grupos diversos e individuos. Por lo tanto, es menos probable desarrollar un sentido amplio de tolerancia.
+
+### ¿Cómo se ha investigado este tema antes?
+
+En la discusión sobre el capital social, la teoría de Putnam afirma que la confianza es fundamental 
+para las normas de reciprocidad y asociatividad, lo que eventualmente permitiría la cooperación entre los agentes sociales y el desempeño institucional (Gordon, 2006).
+
+En este sentido, existen estudios sobre el perfil organizativo, estructural y actitudinal de
+las asociaciones voluntarias sin fines de lucro en Argentina, con especial atención en los procesos de mercantilización y profesionalización y su contribución a la revitalización de una sociedad civil
+democrática (Reigadas, 2007)
+
+Existen otros artículos que han estudiado las relaciones entre confianza social y confianza política, entre confianza social y satisfacción con la democracia y sobre el papel de las asociaciones voluntarias para la creación de confianza social y política (Montero, Zmerli & Newton, 2008)
+
+En particular, para el caso Chileno existen hallazgos que demuestran que las membresías en diversos tipos de participación voluntaria (voluntarismo, grupos de interés y grupos religiosos) tienen una relación positiva con la confianza en el otro.(Valdivieso et al., 2012)
+
+
+# Objetivos
+
+
+## Objetivo Generales
+
+1. Explorar los factores sociales que inciden en la Confianza Generalizada en Chile.
+
+2. Explorar los factores sociales que inciden en la Confianza Vecinal en Chile.
+
+
+## Objetivo Espécíficos
+
+1.1. Analizar el efecto de la participación en asociaciones Instrumentales en la Confianza Generalizada en Chile.
+
+1.2. Analizar el efecto de la participación en asociaciones Expresivas en la Confianza Generalizada en Chile.
+
+2.1. Examinar el efecto de la participación en asociaciones Instrumentales en la Confianza Vecinal en Chile.
+
+2.2. Examinar el efecto de la participación en asociaciones Expresivas en la Confianza Vecinal en Chile.
+
+
+# Análisis Exploratorio
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+
+#chooseCRANmirror()
+
+```
+
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+#paquetes y librerias
+#options(repos = "https://cran.rstudio.com")
+library(rstudioapi) 
+library(dplyr)
+library(panelr)
+library(naniar)
+library(ggplot2)
+```
+
+```{r setup, include=FALSE, echo= FALSE, warning=FALSE, message=FALSE}
+# cargar bases de datos
+
+#setwd(dirname(getActiveDocumentContext()$path))  
+#getwd()
+
+
+load("Datos/ELSOC_W01_v4.01_R.RData") #ELSOC_W01_v4.01_R
+load("Datos/ELSOC_W03_v2.00_R.RData") #ELSOC_W03_v2.00_R
+```
+
+## Seleccion de Variables
+
+Para la presente investigación, se trabajará con las bases de datos del Centro de Estudios de Conflicto y Cohesión Social (COES). En específico con las Olas de 2016 y 2018.
+
+El Centro de Estudios de Conflicto y Cohesión Social (COES) desarrolla investigación colaborativa en temas relacionados al conflicto social y la cohesión (convivencia) en Chile, por medio de un equipo multidisciplinario proveniente de las ciencias sociales y humanidades. COES centra sus actividades académicas y de difusión en el análisis de las múltiples manifestaciones del conflicto social en Chile, sus causas así como también su contexto cultural e histórico. El repositorio de las bases de datos se encuentran en el [Dataverso de la Universidad de Harvard](https://dataverse.harvard.edu/dataverse/coes_data_repository)
+
+A continuación, una breve descripción de las variables consideradas para este estudio:
+
+-**idencuesta:** Variable numérica. Folio identificador del encuestado.
+
+-**ponderador01:** Variable numérica. Ponderador Corte transversal: Ajuste por población.
+
+-**m0_sexo**: Variable Dicotómica. Sexo del entrevistado, toma los valores: 
+
+-1 =Hombre 
+
+-2 =Mujer
+
+-**m0_edad:** Variable Númerica. Edad del entrevistado.
+
+-**m01:** Variable Ordinal. Nivel educacional del entrevistado, toma los valores:
+
+-1= Sin estudios
+
+-2=Educación Básica o Preparatoria incompleta.
+
+-3= Educación Básica o Preparatoria completa.
+
+-4= Educación Media o Humanidades incompletas.
+
+-5= Educación Media o Humanidades completa.
+
+-6= Técnica Superior incompleta.
+
+-7= Técnica Superior completa.
+
+-8= Universitaria incompleta.
+
+-9= Universitaria completa.
+
+-10= Estudios de posgrado (magíster o doctorado).
+
+-**m29:** Variable Numérica. Ingreso total del hogar (monto).
+
+-**c02:** Variable Ordinal. Confianza Social Generalizada (Indica si el entrevistado tiende a confiar o no en las personas en general), toma los valores:
+
+-1=Casi siempre se puede confiar en las personas
+
+-2=Casi siempre hay que tener cuidado al tratar con las personas
+
+-3= Depende. 
+ 
+-**t01:** Variable Ordinal. Confianza Vecinal (indica cuánto confía el entrevistado en su vecino), toma los valores:
+
+-1= Muy poco.
+
+-2= Poco.
+
+-3= Algo.
+
+-4= Bastante.
+
+-5= Mucho.
+
+-**m45:**  Variable Discreta. Nacionalidad del entrevistado, toma los valores:
+
+-1=Chilena
+
+-2=Peruana
+
+-3=Argentina
+
+-4=Colombiana
+
+-5=Boliviana
+
+-6=Haitiana
+
+-7=Espanniola
+
+-8=Otra. Especifique
+ 
+-**c12 (c12_01: c12_09):** Variable categórica. Membresía en asociaciones: para cada membresía se indica si el entrevistado es miembro activo o no de diversas asociaciones cívicas: “Junta de vecinos u otra organización vecinal” ,”Organización religiosa o Iglesia”, “Partido o Movimiento Político”, “Sindicato”, “Asociación Profesional o Gremial”, “Organización de Caridad o Beneficencia”, “Organización deportiva”, “Asociaciones o Centros de estudiantes”, “Otras Organizaciones Voluntarias”. Cada una de estas asociaciones, toma los siguientes valores:
+
+-1= No es miembro
+
+-2= Miembro inactivo
+
+-3= Miembro activo
+
+-**r01 (r01_01: r01_13):** Variable Ordinal. Número de conocidos que tiene el entrevistado: para cada posición social, se le pregunta al entrevistado a cuántas personas conoce con ese rol: “Gerente o director de gran empresa”, “Vendedor ambulante”, “Secretario/a”, “Mecanico de autos”, “Vendedor de tienda o almacén”, “Abogado/a”, “Aseador/a de oficina”, “Médico o doctor/a”, “Parvularia”, “Chofer de taxi o colectivo”, “Camarero o mozo”, “Contador/a”, “Profesor/a de universidad”. Cada uno de estos roles puede tomar los siguientes valores:
+
+-1= Ninguno
+
+-2= Uno
+
+-3= Entre 2 y 4
+
+-4= Entre 5 y 7
+
+-5= Entre 8 y 10
+
+-6= Entre 11 y 15
+
+-7= 16 o más
+
+-**d01_01**: Variable Ordinal. Estatus Social Subjetivo: se le pregunta al entrevistado dónde se ubicaría ud. en la sociedad chilena. Los valores que toma esta variable van de 0 a 10, donde 0 es el nivel más bajo y 10 es el nivel más alto.
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+# Selección de variables
+
+elsoc1<-dplyr::select(elsoc_2016, idencuesta, ponderador01, m0_sexo, m0_edad, 
+                      m01, m29, c02, t01, m45, c12_01, c12_02, c12_03, c12_04, 
+                      c12_05, c12_06, c12_07, c12_08, c12_09, r01_01, r01_02, 
+                      r01_03, r01_04, r01_05, r01_06, r01_07, r01_08, r01_09, 
+                      r01_10, r01_11, r01_12, r01_13, d01_01)
+
+elsoc2<-dplyr::select(elsoc_2018, idencuesta, ponderador01, m0_sexo, m0_edad, 
+                      m01, m29, c02, t01, m45, c12_01, c12_02, c12_03, c12_04, 
+                      c12_05, c12_06, c12_07, c12_08, c12_09, r01_01, r01_02, 
+                      r01_03, r01_04, r01_05, r01_06, r01_07, r01_08, r01_09, 
+                      r01_10, r01_11, r01_12, r01_13,d01_01)
+
+# Generar identificador de ola y setear bases
+elsoc1$ola<-1
+elsoc2$ola<-2
+elsoc<-rbind(elsoc1,elsoc2)
+
+# Generar subbase auxiliar para contar los id agrupados: Si están en las dos olas 
+# apareceran dos veces
+xx<-elsoc%>% 
+  group_by(idencuesta)%>%
+  summarise(n_id=n())
+
+# Unimos la base auxiliar y filtramos aquellos casos que estén dos veces 
+elsoc<-left_join(elsoc, xx, by="idencuesta") 
+elsoc<-elsoc[elsoc$n_id == 2,]
+
+```
+
+## Transformación de variabes 
+
+A continuación, se explicita la transformación de variables.
+
+### Sexo, Edad y Nacionalidad
+
+La variable Sexo fue recodificada en una variable dicotómica, el nuevo nombre de la variable es "mujer"
+y toma el valor 1 para mujeres y 0 para hombres.
+
+La variable Edad se recodificó en un factor de 6 niveles con los siguientes intervalos de edad:
+- "18-24"
+- "25-34"
+- "35-44"
+- "45-54"
+- "55-64"
+- "65-max"
+
+Finalmente, para la variable Nacionalidad, se recodificó la variable con el nombre "extranjero",
+Los valores que toma esta variable son 0 para chileno y 1 para Peruana, Argentina, Colombiana,
+Boliviana, Haitiana, Espanniola, Otra.
+
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+# Sexo
+elsoc = elsoc %>% 
+  dplyr::mutate (mujer       = case_when(m0_sexo   == 1       ~ 0,
+                                         m0_sexo   == 2       ~ 1)) %>% 
+# Edad
+  
+  dplyr::mutate (edad_reco        = case_when(m0_edad %in% 18:24   ~ "18-24",
+                                              m0_edad %in% 25:34   ~ "25-34",
+                                              m0_edad %in% 35:44   ~ "35-44",
+                                              m0_edad %in% 45:54   ~ "45-54",
+                                              m0_edad %in% 55:64   ~ "55-64", 
+                                              m0_edad %in% 65:88   ~ "65-") %>% as.factor()) %>% 
+# Nacionalidad
+  
+  dplyr::mutate (extranjero     = case_when(m45     %in% 1       ~ 0,
+                                            m45     %in% 2 :8    ~ 1))
+```
+
+### Ingreso 
+Se transforma el ingreso a quintiles, con un total de 5 quintiles
+La variable original tiene valores numéricos que van desde el 0 hasta los $250.000.000
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+
+elsoc = elsoc %>% 
+  dplyr::mutate (ingreso_quintil = ntile(m29,5))
+
+
+```
+
+### Nivel Educativo
+
+Para propósitos de esta investigación, se redujeron las categorías de respuesta de 10 a 5 ítems. 
+La recodificado de la variable educación queda como un factor con 5 atributos: sin estudios, primaria, secundaria, tecnica y universitaria.
+-Sin estudios (1)
+-Primaria: Educación Básica o Preparatoria incompleta (2), Educación Básica o Preparatoria completa (3).
+-Secundaria:Educación Media o Humanidades incompleta (4), Educación Media o Humanidades completa (5).
+-Técnica: Técnica Superior incompleta (6), Técnica Superior completa (7).
+-Universitaria: Universitaria incompleta (8), Universitaria completa (9), Estudios de posgrado (magíster o doctorado)(10).
+
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+# Nivel educativo
+
+elsoc = elsoc %>% dplyr::mutate (nivel_educ  = case_when(
+                                         m01     %in% 1       ~ "sin estudios",
+                                         m01     %in% 2 :3    ~ "primaria",
+                                         m01     %in% 4 :5    ~ "secundaria",
+                                         m01     %in% 6 :7    ~ "tecnica",
+                                         m01     %in% 8 :10   ~ "universitaria") %>% as.factor())  
+  
+
+skimr::skim(elsoc$nivel_educ)
+str(elsoc$nivel_educ)
+class(elsoc$nivel_educ)
+
+```
+
+### Confianza Social Generalizada
+
+La confianza ha sido recodificada en una variable dicotómica con los siguientes valores:
+Confía = 1, No confía = 0. 
+Para construir esta variable, se consideró como valor 1 a quienes afirman que "casi siempre se puede confiar en la gente"(1) y  a aquellos individuos que respondieron "depende"(3).
+Para el valor 0 (no confía), se consideró la respuesta "Casi siempre hay que tener cuidado al tratar con las personas"(2). 
+
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+# Confianza social generalizada
+elsoc = elsoc %>%
+  dplyr::mutate (confianza_gral  = case_when(c02       == 1       ~ 1,  
+                                             c02       == 2       ~ 0, 
+                                             c02       == 3       ~ 1) %>% as.factor) 
+summary(elsoc$confianza_gral)
+
+```
+
+### Número de conocidos
+
+Esta variable corresponde al número de conocidos que tiene el entrevistado según posición social y en la teoría suele denominarse "Generador de posiciones" (Lin y Dumin, 1986)
+Esta variable se forma con una muestra de posiciones ocupacionales destacadas en la estructura social y luego se le pide a los encuestados que indiquen si tienen o no contactos en ellas. El generador de posiciones se basa en dos supuestos fundamentales. Primero, asume que la distribución de recursos en una sociedad refleja la jerarquía piramidal de la estructura ocupacional de dicha sociedad, por lo que se apoya principalmente en un enfoque de estratificación social. Segundo, supone que el hecho de conocer a alguien en determinada ocupación significa tener acceso a los recursos que esta provee.(Verhaeghe y Li, 2015). 
+
+Para propósitos de esta investigación, hemos considerado si la gente tiene contacto con otros o no, con el valor 1 cuando el número de conocidos es de uno en adelante (2:7) y 0 cuando el número de conocidos es ninguno (1).
+
+Luego, se hace una sumatoria simple para considerar la cantidad de conocidos por entrevistado.
+De esta manera solo estaremos contando la cantidad de lazos mencionados. La nueva variable tiene el nombre de "extensidad_red" toma valores numéricos de 0 a 13, donde 0 es el valor mínimo de la extensión de la red del entrevistado y 13 es la extensión máxima de la red personal del netrevistado.
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+elsoc = elsoc %>%
+  dplyr::mutate (r01_01      = ifelse   (r01_01     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_02      = ifelse   (r01_02     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_03      = ifelse   (r01_03     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_04      = ifelse   (r01_04     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_05      = ifelse   (r01_05     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_06      = ifelse   (r01_06     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_07      = ifelse   (r01_07     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_08      = ifelse   (r01_08     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_09      = ifelse   (r01_09     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_10      = ifelse   (r01_10     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_11      = ifelse   (r01_11     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_12      = ifelse   (r01_12     > 1 , 1,    0)) %>%
+  dplyr::mutate (r01_13      = ifelse   (r01_13     > 1 , 1,    0)) %>% 
+  
+# sumatoria extensidad de red
+
+ mutate(extensidad_red=r01_01+r01_02+r01_03+r01_04+r01_05+r01_06+r01_07+r01_08+
+           r01_09+r01_10+r01_11+r01_12+r01_13)
+summary(elsoc$extensidad_red)
+```
+
+### Membresía en asociaciones voluntarias
+
+Cuando el entrevistado indica que no es miembro (1) de alguna asociación, toma el valor 0.
+Si el entrevistado indica que es miembro inactivo (2) de alguna asociación, toma el valor 1
+Si el entrevistado indica que es miembro activo (3) de alguna asociación, toma el valor 1.
+
+Luego se dividen las asociaciónes en dos tipos y y se crea una nueva variable llamada "membresía", la cual contiene dos distinciones:
+
+-Membresías Instrumentales: Partido o movimiento político, Sindicato, Asociación de profesionales, Centros de estudiantes. 
+
+-Membresías Expresivas: Junta de vecinos, Asociaciones religiosas, Asociaciones deportivas y
+Grupos de caridad.
+
+Finalmente, se realiza una sumatoria simple para contar la cantidad de asociaciones a las que pertenece el entrevistado. La nueva variable toma valores de 0 a 4, donde 0 es el mínimo de asociaciones donde el entrevistado participa y 4 es el máximo de asociaciones en las que se participa.
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+elsoc = elsoc %>% 
+  dplyr::mutate (junta_vecin   = ifelse   (c12_01     < 2 , 0,    1)) %>% 
+  dplyr::mutate (religiosa     = ifelse   (c12_02     < 2 , 0,    1)) %>%
+  dplyr::mutate (partido_mov   = ifelse   (c12_03     < 2 , 0,    1)) %>%
+  dplyr::mutate (sindicato     = ifelse   (c12_04     < 2 , 0,    1)) %>%
+  dplyr::mutate (profesional   = ifelse   (c12_05     < 2 , 0,    1)) %>%
+  dplyr::mutate (caridad       = ifelse   (c12_06     < 2 , 0,    1)) %>%
+  dplyr::mutate (deportiva     = ifelse   (c12_07     < 2 , 0,    1)) %>%
+  dplyr::mutate (centro_estud  = ifelse   (c12_08     < 2 , 0,    1)) %>%
+  dplyr::mutate (otra          = ifelse   (c12_09     < 2 , 0,    1))
+
+# Sumatoria de membresías
+elsoc<-elsoc %>%
+  mutate(membresia=junta_vecin+religiosa+partido_mov+sindicato+profesional+caridad+deportiva+
+           centro_estud)%>%
+  mutate(memb_instrum=partido_mov+sindicato+profesional+centro_estud)%>%
+  mutate(memb_expres=junta_vecin+religiosa+deportiva+caridad)
+
+summary(elsoc$memb_expres)
+summary(elsoc$memb_instrum)
+
+
+```
+
+### Estatus Social Subjetivo
+
+Esta variable indica la percepción subjetiva del entrevistado en la sociedad, donde 0 es el valor mínimo (nivel más bajo) y 10 es el valor máximo (nivel más alto)
+
+Se redujeron las categorías de respuesta a 3 valores, donde de 0 a 4 toma el valor 1; de 5 a 6 toma el valor 2 y de 7 a 10 toma el valor 3. 
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+elsoc = elsoc %>% 
+  dplyr::mutate (estatus_sub = case_when(d01_01%in%0:4~1,
+                                         d01_01%in%5:6~2,
+                                         d01_01%in%7:10~3) %>% as.factor) 
+  
+# seleccion de variables
+names(elsoc)
+elsoc = elsoc %>% 
+  dplyr::select (idencuesta, ola, ponderador01, mujer, edad=m0_edad,edad_reco, nivel_educ, ingreso=m29,                  ingreso_quintil, extranjero, extensidad_red, confianza_vecinal=t01, confianza_gral,                    junta_vecin, religiosa, partido_mov, sindicato, profesional, caridad, deportiva, 
+                 centro_estud, otra, membresia, memb_instrum, memb_expres, estatus_sub,
+                 partido_mov, sindicato, profesional,deportiva)
+                 
+# transformar a data panel 
+#elsoc_long<-panel_data(elsoc, id = idencuesta, wave = ola) 
+#elsoc_long<-complete_data(elsoc_long,min.waves = 2)
+```
+
+
+## Analisis Datos Perdidos
+
+Considerando que  la gran mayoría de los casos se encuentra en la variable Ingreso y que
+la suma total de estos casos corresponde al 17%, se ha optado por eliminar los casos sin información para trabajar solo con los casos completos. La muestra total baja de 4456 observaciones a 3623 observaciones.
+Si bien esta no es la manera más adecuada de trabajar los casos perdidos, ya que los resultados no podrán ser extrapolados a toda la población,  para los propósitos de esta investigación se trabajara con casos completos.
+Sin embargo, es importante darle una mirada más profunda para evaluar la mejor manera de tratar los casos perdidos.
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+#asignar NA a los valores -999 y -888
+elsoc[elsoc=="-999"] <- NA
+elsoc[elsoc=="-888"] <- NA
+#revisar na's
+miss_var_summary(elsoc)
+gg_miss_var(elsoc, show_pct = T)
+
+```
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+
+# Complete case analysis. omitir NA
+
+elsoc <- na.omit(elsoc)
+
+```
+
+
+
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+#factor
+elsoc$mujer         <- as.factor(elsoc$mujer)
+elsoc$edad_reco     <- as.factor(elsoc$edad_reco)
+elsoc$nivel_educ    <- as.factor(elsoc$nivel_educ)
+elsoc$extranjero    <- as.factor(elsoc$extranjero)
+elsoc$estatus_sub   <- as.factor(elsoc$estatus_sub)
+elsoc$junta_vecin   <- as.factor(elsoc$junta_vecin)
+elsoc$religiosa     <- as.factor(elsoc$religiosa)
+elsoc$partido_mov   <- as.factor(elsoc$partido_mov)
+elsoc$sindicato     <- as.factor(elsoc$sindicato)
+elsoc$profesional   <- as.factor(elsoc$profesional) 
+elsoc$caridad       <- as.factor(elsoc$caridad)
+elsoc$deportiva     <- as.factor(elsoc$deportiva)
+elsoc$centro_estud  <- as.factor(elsoc$centro_estud)
+elsoc$otra          <- as.factor(elsoc$otra)
+  
+#numerica  
+elsoc$edad <- as.numeric(elsoc$edad)
+elsoc$ingreso <- as.numeric(elsoc$ingreso)
+elsoc$extensidad_red <- as.numeric(elsoc$extensidad_red)
+elsoc$confianza_vecinal <- as.numeric(elsoc$confianza_vecinal)
+
+#install.packages("writexl")
+#library(writexl)
+#getwd()
+
+#write_xlsx(elsoc, "elsoc.xlsx")
+```
+
+
+
+## Resumen Variables
+
+### Variable dependiente
+
+-Confianza Generalizada: `confianza_gral`
+
+### Características de los encuestados
+
+-Edad: `edad`
+
+-Sexo: `mujer` 
+
+-Nacionalidad: `extranjero` 
+
+-Nivel educativo: `nivel_educ`
+
+-Ingreso: `ingreso` 
+
+-Ingreso quintil: `ingreso_quintil` 
+
+
+### Membresía en asociaciones voluntarias
+
+-Membresía en Asociaciones Voluntarias Instrumentales: `memb_instrum` 
+
+-Membresía en Asociaciones Voluntarias Expresivas: `memb_expres` 
+
+### Extension de red personal
+
+-`extensidad_red` 
+
+### Confianza Vecinal 
+
+-`confianza_vecinal`
+
+### Percecpción subjetiva de estatus
+
+-`estatus_sub`
+
+### Características de la encuesta
+
+-ID: `idencuesta`
+
+-Ola: `ola`
+
+
+## Descriptivos
+### Variables cuantitativas
+#### Confianza Generalizada por ingreso
+
+```{r, echo= FALSE, include=FALSE, warning=FALSE, message=FALSE}
+
+## Distribucion ingreso por confianza
+#quintil
+
+ingreso_quintil_plot <- elsoc %>% 
+  ggplot(aes(y=ingreso_quintil, x=confianza_gral, color=as.factor(ola))) +
+  labs(x = "Confianza Generalizada", y = "Quintil Ingreso",
+       title = "Distribución Quintil Ingreso según Confianza Generalizada por año") +
+   geom_boxplot()+
+ labs(color = "Año")+ scale_color_discrete (labels = c("2016", "2018"))
+
+ingreso_quintil_plot
+```
+
+Al revisar la distribución del ingreso por quintil en relacióna la confianza Generalizada,
+es posible apreciar que la distribución de ingresos tiene una diferencia entre el año 2016 y el año 2018. Es probable que esto se deba a algun valor atípico en el ingreso. Para tener una visión más completa, revisaremos esta distribución con el logaritmo del ingreso, ya que los valores van desde 287.000 CLP hasta los 250.000.000 CLP, con una media de 723.272 CLP.
+
+
+```{r, echo=FALSE, warning=FALSE}
+summary(elsoc$ingreso)
+#log de ingreso
+elsoc  %>% 
+  ggplot(aes(y=ingreso, x=confianza_gral, color=as.factor(ola))) +
+  labs(x = "Confianza Generalizada", y = "Ingreso",
+       title = "Distribución Logaritmo de Ingreso según Confianza Generalizada por año") +
+   geom_boxplot()+
+  scale_y_log10() + coord_trans(y="log10")+
+  labs(color = "Año")+ scale_color_discrete (labels = c("2016", "2018"))
+ summary(elsoc$confianza_vecinal)
+ class(elsoc$confianza_vecinal)
+```
+En este Gráfico, es posible apreciar de mejor manera la distribución del ingreso y, efectivamente,
+es posible apreciar que existen valos atípicos, sobre todo para el año 2016. Por lo que es necesario analizar con mayor profundidad este hecho. 
+
+#### Confianza Generalizada por Confianza vecinal 
+```{r, echo=FALSE, warning=FALSE}
+
+#confianza vecinal  
+
+elsoc %>%
+  ggplot(aes(x = confianza_vecinal, fill = as.factor(ola))) +
+  geom_histogram(alpha = 0.5, binwidth = 0.5, position = "dodge") +
+  stat_count(geom = "text", aes(label = paste0(round((after_stat(count))/sum(after_stat(count)) * 100, 1), "%")),
+             position = position_dodge(width = 0.8), vjust = -0.5) +
+  labs(x = "Confianza Vecinal", y = "Frecuencia", title = "Distribución confianza vecinal") +
+  scale_fill_discrete(name = "Ola", labels = c("2016", "2018"))
+
+
+
+        
+```
+
+
+Vemos que la confianza vecinal se distribuye relativamente normal, con una mayor cantidad de casos concentrados en el número 4. Llama la atención que en un esenario de muy baja confianza generalizada, la confinaza vecinal se mantiene elevada.
+Por lo tanto, sería interesante revisar si los factores que inciden en la confianza generalizada afectan de la misma manera a la confianza vecinal. 
+
+
+#### Confianza Generalizada por Extension de Red personal 
+
+```{r, echo=FALSE, warning=FALSE}
+#extensidad de red  
+
+par(mfrow = c(1, 2))
+
+elsoc  %>% 
+  ggplot(aes(y=extensidad_red, x=confianza_gral, color=as.factor(ola))) +
+  labs(x = "Confianza Generalizada", y = "Extensidad de la Red personal",
+       title = "Distribución Extensidad de Red según Confianza Generalizada por año") +
+   geom_boxplot()+
+ labs(color = "Año")+ scale_color_discrete (labels = c("2016", "2018"))
+
+elsoc %>%
+  ggplot(aes(x = extensidad_red, fill = as.factor(ola))) +
+  geom_histogram(alpha = 0.5, binwidth = 0.5, position = "dodge") +
+  stat_count(geom = "text", aes(label = paste0(round((after_stat(count))/sum(after_stat(count)) * 100, 1), "%")),
+             position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
+  labs(x = "Extensidad de Red", y = "Frecuencia", title = "Distribución extensidad de red") +
+  scale_fill_discrete(name = "Ola", labels = c("2016", "2018"))
+
+par(mfrow = c(1, 1))
+```
+
+
+La distribución de la extensidad de la red personal de los entrevistados se distribuye relativamente normal. De acuerdo al boxplot, es posible apreciar que la extensidad de la red se modifica respecto del año 2016.
+
+Este fenomeno es interesante, ya que la literatura nos confirma que a mayor extensividad de la red, mayor impacto en la tolerancia y confianza de los individuos. Sin embargo la extensividad de la red personal aumenta no solo para quienes confían, sino tambien para aquellos entrevistados que afirman que no confían.
+
+#### Edad
+
+```{r, echo=FALSE, warning=FALSE}
+##edad
+#
+#elsoc %>% 
+#  ggplot(aes(x=edad)) +
+#  geom_density(color="blue", fill="blue", alpha=0.6) +
+#  labs(x="Edad", y="Densidad", title = "Densidad Edad")+
+#  theme_classic()
+#
+#elsoc %>% ggplot(aes(y= edad, color=as.factor(ola))) +
+#  labs(x = "Año", y = "Edad",
+#       title = "Edad del entrevistado por año") +
+#   geom_boxplot()+
+# labs(color = "Año")+ scale_color_discrete (labels = c("2016", "2018"))
+#par(mfrow = c(1, 2))
+```
+
+La distribución de la variable edad tiene una distribución relativamente normal, con una leve acumulación de casos hacia el lado izquierdo.
+El boxplot muestra una distribución normal entre el año 2016 y 2018
+
+#### Membresía Expresiva
+
+```{r, echo=FALSE, warning=FALSE}
+
+elsoc %>%
+  ggplot(aes(x = memb_expres, fill = as.factor(ola))) +
+  geom_histogram(alpha = 0.5, binwidth = 0.5, position = "dodge") +
+  stat_count(geom = "text", aes(label = paste0(round((after_stat(count))/sum(after_stat(count)) * 100, 1), "%")),
+             position = position_dodge(width = 0.8), vjust = -0.5) +
+  labs(x = "Membresía Expresiva", y = "Frecuencia", title = "Distribución Membresía Expresiva") +
+  scale_fill_discrete(name = "Ola", labels = c("2016", "2018"))
+
+
+```
+
+
+La distribución de esta variable no es normal. De hecho tiene una alta concentración de casos en el nivel 0. Es decir, la gran mayoría de los entrevistados no tiene participación en asociaciones voluntarias expresivas (Junta de vecinos, Asociaciones religiosas, Asociaciones deportivas y Grupos de caridad.) 
+
+Este hallazgo es muy relevante, ya que de acuerdo con la literatura, se espera que una baja participación en asociaciones expresivas tenga una relación negativa con la confianza generalizada. 
+
+
+#### Membresía Instrumental
+```{r, echo=FALSE, warning=FALSE}
+#elsoc  %>%
+#  ggplot(aes(y=memb_instrum, x=confianza_gral, color=as.factor(ola))) +
+#  labs(x = "Confianza Generalizada", y = "Membresía Instrumental",
+#       title = "Membresía Instrumental según Confianza Generalizada por año") +
+#   geom_boxplot()+
+# labs(color = "Año")+ scale_color_discrete (labels = c("2016", "2018"))
+
+
+elsoc %>%
+  ggplot(aes(x = memb_instrum, fill = as.factor(ola))) +
+  geom_histogram(alpha = 0.5, binwidth = 0.5, position = "dodge") +
+  stat_count(geom = "text", aes(label = paste0(round((after_stat(count))/sum(after_stat(count)) * 100, 1), "%")),
+             position = position_dodge(width = 0.8), vjust = -0.5) +
+  labs(x = "Membresía Instrumental", y = "Frecuencia", title = "Distribución Membresía Instrumental") +
+  scale_fill_discrete(name = "Ola", labels = c("2016", "2018"))
+```
+
+
+La distribución de esta variable no es normal. De hecho tiene una alta concentración de casos en el nivel 0. Es decir, la gran mayoría de los entrevistados no tiene participación en asociaciones voluntarias instrumentales (Partido o movimiento político, Sindicato, Asociación de profesionales, Centros de estudiantes.) 
+
+Este hallazgo es muy relevante, ya que de acuerdo con la literatura, se espera que una baja participación en asociaciones instrumentales tenga una relación negativa con la confianza generalizada. 
+
+### Variables cualitativas
+
+#### Sexo
+```{r, echo=FALSE, warning=FALSE}
+#sexo
+elsoc_2016 <- elsoc %>% filter(ola==1)
+elsoc_2018 <- elsoc %>% filter(ola==2)
+
+tabla_sexo16 <- table(elsoc_2016$confianza_gral, elsoc_2016$mujer) 
+  colnames(tabla_sexo16) = c("Hombre", "Mujer")
+  rownames(tabla_sexo16) = c("No confía", "Confía")
+
+ tabla_sexo18 <- table(elsoc_2018$confianza_gral, elsoc_2018$mujer) 
+  colnames(tabla_sexo18) = c("Hombre", "Mujer")
+  rownames(tabla_sexo18) = c("No confía", "Confía")
+
+ tabla_sexo <- cbind("(año 2016)",tabla_sexo16,"(año2018)",tabla_sexo18)
+  knitr::kable(tabla_sexo, caption = "Confianza Según Sexo") 
+
+
+```
+
+Al revisar la distribución de sexo según confianza generalizada, es posible apreciar que gran cantidad de los entrevistados No Confía. Esto se condice con el escenario político y social actual que nos habla de una falta de confianza en el otro.
+
+
+#### Nacionalidad
+
+```{r, echo=FALSE, warning=FALSE}
+#nacionalidad
+tabla_extranjero16 <- table(elsoc_2016$confianza_gral, elsoc_2016$extranjero) 
+  colnames(tabla_extranjero16) = c("Chileno", "Extranjero")
+  rownames(tabla_extranjero16) = c("No confía", "Confía")
+ #knitr::kable(tabla_extranjero16, caption = "Confianza Según Nacionalidad (Año 2016)") 
+ 
+ tabla_extranjero18 <- table(elsoc_2018$confianza_gral, elsoc_2018$extranjero) 
+  colnames(tabla_extranjero18) = c("Chileno", "Extranjero")
+  rownames(tabla_extranjero18) = c("No confía", "Confía")
+ #knitr::kable(tabla_extranjero16, caption = "Confianza Según Nacionalidad (Año 2018)") 
+ 
+  
+ tabla_extranjero <- cbind("(año 2016)",tabla_extranjero16,"(año 2018)",tabla_extranjero18)
+  knitr::kable(tabla_extranjero, caption = "Confianza Según Nacionalidad") 
+  
+```
+
+
+Lo mismo sucede al revisar la variable confianza generalizada con nacionalidad: es posible apreciar que la gran mayoría de los entrevistados no confía. Por lo demás, existe una muy bajo número de extranjeros en la distribución de la muestra. 
+
+#### Nivel Educativo
+```{r, echo=FALSE, warning=FALSE}
+# Nivel Educativo
+tabla_educacion16 <- table(elsoc_2016$confianza_gral, elsoc_2016$nivel_educ) 
+  #colnames(tabla_educacion16) = c("Chileno", "Extranjero")
+  rownames(tabla_educacion16) = c("No confía", "Confía")
+ knitr::kable(tabla_educacion16, caption = "Confianza Según Nivel Educativo (Año 2016)") 
+ 
+ tabla_educacion18 <- table(elsoc_2018$confianza_gral, elsoc_2018$nivel_educ) 
+  #colnames(tabla_educacion16) = c("Chileno", "Extranjero")
+  rownames(tabla_educacion16) = c("No confía", "Confía")
+ knitr::kable(tabla_educacion16, caption = "Confianza Según Nivel Educativo (Año 2018)") 
+ 
+```
+
+De acuerdo con la tabla, es posible apreciar que se sigue el patron de desconfianza.
+En general, para el año 2016, existe muy poca gente que confía
+
+De acuerdo con la tabla, es posible apreciar que se sigue el patron de desconfianza.
+En general, para el año 2018, existe muy poca gente que confía, pero destacan los entrevistados
+con educación Universitaria, ya que aumentaron de 73 a 113.
+
+#### Percepción subjetiva de estatus
+
+```{r, echo=FALSE, warning=FALSE}
+tabla_estatus16 <- table(elsoc_2016$confianza_gral, elsoc_2016$estatus_sub) 
+  colnames(tabla_estatus16) = c("Nivel Bajo", "Nivel Medio", "Nivel Alto")
+  rownames(tabla_estatus16) = c("No confía", "Confía")
+ #knitr::kable(tabla_estatus16, caption = "Confianza Según estatus subjetivo (Año 2016)") 
+ 
+ tabla_estatus18 <- table(elsoc_2018$confianza_gral, elsoc_2018$estatus_sub) 
+  colnames(tabla_estatus18) = c("Nivel Bajo", "Nivel Medio", "Nivel Alto")
+  rownames(tabla_estatus18) = c("No confía", "Confía")
+ #knitr::kable(tabla_extranjero16, caption = "Confianza Según Nacionalidad (Año 2018)") 
+ 
+  
+ tabla_estatus <- cbind("(año 2016)",tabla_estatus16,"(año 2018)",tabla_estatus18)
+  knitr::kable(tabla_estatus, caption = "Confianza Según Estatus Subjetivo") 
+  
+
+```
+
+En general, es posible confirmar que independiente del estatus subjetivo del entrevistado, existe una fuerte tendencia a la desconfianza.
+
+# Correlaciones
+
+
+```{r, echo=FALSE, warning=FALSE}
+par(mfrow = c(1, 2))
+cor_2016 <- cor(elsoc_2016 %>% dplyr::select(where(is.numeric),-c(ponderador01,idencuesta,ingreso,ola,membresia)))
+         
+        corrplot:: corrplot.mixed(cor_2016, order = 'AOE', 
+               tl.cex = 0.7, 
+               number.cex = 0.8,
+               cl.cex = 0.7,
+               diag = "l", 
+               tl.pos = "lt")
+        
+cor_2018 <- cor(elsoc_2018 %>% dplyr::select(where(is.numeric),-c(ponderador01,idencuesta,ingreso,ola,membresia)))
+         
+        corrplot:: corrplot.mixed(cor_2018, order = 'AOE', 
+               tl.cex = 0.7, 
+               number.cex = 0.8,
+               cl.cex = 0.7,
+               diag = "l", 
+               tl.pos = "lt")
+        
+par(mfrow = c(1, 1))
+
+#corr positivas
+
+cor(elsoc_2016$ingreso_quintil, elsoc_2016$extensidad_red, use = "complete.obs")
+cor(elsoc_2016$memb_instrum, elsoc_2016$memb_expres, use = "complete.obs")
+
+cor(elsoc_2018$ingreso_quintil, elsoc_2018$extensidad_red, use = "complete.obs")
+cor(elsoc_2018$memb_instrum, elsoc_2018$memb_expres, use = "complete.obs")
+
+#corr negativas
+
+cor(elsoc_2016$edad, elsoc_2016$ingreso_quintil, use = "complete.obs")
+cor(elsoc_2018$edad, elsoc_2018$ingreso_quintil, use = "complete.obs")
+```
+
+ Podemos notar que las correlaciones positivas mas importantes son las siguientes:
+
+*Para el año 2016:*
+|--------------------------|-----------------------|-------------|
+| **Variable 1**           | **Variable 2 **       | **Correlacion** |
+|--------------------------|-----------------------|-------------|
+| Ingreso                  | Extensidad de red     | 0.246       |
+| Membr Expresiva          | Membr Intrumental     | 0.299       |
+
+*Para el año 2018:*
+|--------------------------|-----------------------|-------------|
+| **Variable 1**           | **Variable 2 **       | **Correlacion** |
+|--------------------------|-----------------------|-------------|
+| Ingreso                  | Extensidad de red     | 0.324       |
+| Membr Expresiva          | Membr Intrumental     | 0.357       |
+
+
+Si bien las correlaciones no son tan fuertes, es posible apreciar una correlación entre las membresías 
+expresivas y las membresías  instrumentales.
+
+ 
+ Por otro lado, es posible notar que las correlaciones negativas mas importante son:
+ 
+ *Para el año 2016:*
+|--------------------------|-----------------------|-------------|
+| **Variable 1**           | **Variable 2 **       | **Correlacion** |
+|--------------------------|-----------------------|-------------|
+| Edad                     | Ingreso               | -0.218      |
+
+ 
+*Para el año 2018:*
+|--------------------------|-----------------------|-------------|
+| **Variable 1**           | **Variable 2 **       | **Correlacion** |
+|--------------------------|-----------------------|-------------|
+| Edad                     | Ingreso               | -0.218      |
+
+
+Lo cual tiene sentido, ya que el ingreso debería ser proporcional a los años de estudio/trabajo
+
+# Regresion Lineal
+## Confianza Generalizada
+```{r, echo=FALSE, warning=FALSE}
+
+# regresion logistica
+modelo_confianza_gral_2016 <- glm(confianza_gral ~ edad_reco + nivel_educ + ingreso + extranjero + extensidad_red + 
+                          estatus_sub + memb_instrum + memb_expres , data = elsoc_2016, family = binomial)
+
+modelo_confianza_gral_2018 <- glm(confianza_gral ~ edad_reco + nivel_educ + ingreso + extranjero + extensidad_red + 
+                          estatus_sub + memb_instrum + memb_expres , data = elsoc_2018, family = binomial)
+
+
+summary(modelo_confianza_gral_2016)
+summary(modelo_confianza_gral_2018)
+
+#   # Convert the summary table to a data frame
+#   summary_df <- as.data.frame(summary_table)
+#   
+#   # Print the summary table using kable() function
+#   kable(summary_df, format = "markdown")
+#test <- summary(modelo_confianza_gral_2016)
+#test2 <- as.data.frame(test)
+#knitr::kable(coef(test), caption = "Tabla de Coeficientes del Modelo")
+#knitr::kable(test$table, format = "html")
+
+
+```
+
+Al revisar las variables que tienen un impacto significativo en Confianza Generalizada, vemos que las más importantes son:
+
+-nivel_eductecnica: P value = 0.00076 ***
+
+-nivel_educuniversitaria: P value =  1.84e-15 ***
+
+-extranjero1:  P value = 0.03869 * 
+
+-memb_instrum: P value = 0.00113 ** 
+
+## Confianza Vecinal
+
+```{r, echo=FALSE, warning=FALSE}
+
+sum(is.na(elsoc))
+sum(is.na(elsoc_2016))
+sum(is.na(elsoc_2018))
+
+# regresion lineal
+modelo_confianza_vecinal_2016 <- glm(confianza_vecinal ~ edad_reco + nivel_educ + 
+                                       ingreso + extranjero + extensidad_red + 
+                                       estatus_sub + memb_instrum + memb_expres , 
+                                     data = elsoc_2016)
+
+modelo_confianza_vecinal_2018 <- glm(confianza_vecinal ~ edad_reco + nivel_educ + 
+                                       ingreso + extranjero + extensidad_red + 
+                                       estatus_sub + memb_instrum + memb_expres , 
+                                     data = elsoc_2018)
+
+
+summary(modelo_confianza_vecinal_2016)
+summary(modelo_confianza_vecinal_2018)
+
+```
+
+-edad_reco55-64: P value =  0.001339 ** 
+-edad_reco65-: P value = 1.75e-06 ***
+-nivel_educsecundaria: P value = 0.011585 *  
+-nivel_educsin estudios:  P value =  0.035922 *  
+-nivel_eductecnica: P value =  0.000846 ***
+-nivel_educuniversitaria: P value =  4.74e-08 ***
+-extranjero1: P value = 0.047953 *  
+-extensidad_red: P value =  0.005924 ** 
+-estatus_sub2: P value = 0.002623 ** 
+-memb_instrum: P value = 0.014467 *  
+-memb_expres:P value = 1.02e-06 ***
+
+#Linealidad
+```{r}
+glimpse(elsoc_2016)
+
+# Gráfico de dispersión entre la variable independiente y la variable dependiente
+ggplot(elsoc_2016, aes(x = edad , y = confianza_gral)) +
+  geom_point() +
+  geom_smooth(method = "glm", method.args = list(family = "binomial")) +
+  labs(x = "Confianza Vecinal", y = "Membresía Instrumental") +
+  theme_minimal()
+
+```
+# indep residuos
+```{r}
+residuos_2016_v <- residuals(modelo_confianza_vecinal_2016) # Obtiene los residuos
+residuos_2016_G <- residuals(modelo_confianza_gral_2016) # Obtiene los residuos
+
+# Gráfico de residuos autocorrelación parcial (PACF)
+car::residualPlots(modelo_confianza_vecinal_2016)
+plot(modelo_confianza_vecinal_2016)
+```
+#homocedasticidad
+```{r}
+residuos_2016_v <- fitted(modelo_confianza_vecinal_2016) # Obtiene los valores ajustados
+
+# Gráfico de dispersión entre los valores ajustados y los residuos
+ggplot(data.frame(residuos_2016_v, residuos_2016_v), aes(x = residuos_2016_v, y = residuos_2016_v)) +
+  geom_point() +
+  labs(x = "Valores Ajustados", y = "Residuos") +
+  theme_minimal()
+
+```
+
+#Multicolinealidad
+```{r}
+model <- glm(variable_dependiente ~., data = your_data_frame, family = "binomial") # Ajusta el modelo logístico
+
+# Cálculo de los valores de inflación de varianza (VIF)
+car::vif(modelo_confianza_gral_2016)
+
+```
+
+
+# Hipótesis
+
+-Se espera que las membresías en asociaciones Instrumentales estén positivamente asociadas a la confianza generalizada.
+
+-Se espera que las membresías en asociaciones Expresivas estén negativamente asociadas a la confianza generalizada.
+
+-Se espera que, dada la desconexión entre asociaciones Instrumentales y territorio, la membresía en asociaciones Instrumentales estén negativamente asociada a la confianza vecinal.
+
+-Se espera que las membresías en asociaciones Expresivas estén positivamente asociadas a la confianza vecinal.
+
+
+##Conclusiones 
+
+Si bien, se requiere mayor analisis para poder afirmar si la participación en asociaciones voluntarias tiene una asociación sobre la confianza, es importante destacar que la gran mayoría de los entrevistados tiene muy baja participación en estas asociaciones (ya sean Instrumentales o Expresivas), lo cual se condice con la literatura sobre el escenario sociopolítica actual: elevada desconfianza y poca participación cívica. 
+
+Considerando además que los datos son longitudinales, existe la posibilida de mejorar el análisis para encontrar hallazgos interesantes que nos puedan ayudar a ver la asociación entre las membresias y la confianza en el tiempo.
+
+
+
+# Referencias
+
+
+- Diani, M. (2015). The cement of civil society: Studying networks in localities. Cambridge University Press.
+
+- Erickson, B. (2004). The distribution of gendered social capital in Canada. In Creation and Returns of Social Capital (pp. 27–50). Routledge. https://doi.org/10.4324/9780203643648-13
+
+- Feld, S. L. (1981). The Focused Organization of Social Ties. American Journal of Sociology, 86(5), 1015–1035. JSTOR.
+
+- Glanville, J. L. (2004). Voluntary Associations and Social Network Structure: Why Organizational Location and Type Are Important. Sociological Forum, 19(3), 465–491. https://doi.org/10.1023/B:SOFO.0000042557.56194.03
+
+- Glanville, J. L. (2016). Why Does Involvement in Voluntary Associations Promote Trust? Examining the Role of Network Diversity. Sociological Inquiry, 86(1), 29–50. https://doi.org/10.1111/soin.12096
+
+- Putnam, R. D., Leonardi, R., & Nanetti, R. (1994). Making democracy work: Civic traditions in modern Italy (5. print., 1. Princeton paperback print). Princeton Univ. Press.
+
+- Son, J., & Lin, N. (2008). Social capital and civic action: A network-based approach. Social Science Research, 37(1), 330–349.
+
+- Valdivieso, Patricio. (2012). Policies for Participation, Life in Association and Confidence, Implications in the Case of Chile. Bulletin of Latin American Research. 31. 336-351. 10.2307/23274193.
+
+-Valdivieso, Patricio & Villena-Roldan, Benjamin. (2012). Individual and Political Factors as Sources of Social Capital at the Local Level: the Case of Chile.  
+
+- Gordon, S. (2006). Confianza, reciprocidad y asociatividad: ¿relatión indispensable para el desempeño institutional? Estudios Sociológicos, 24(71), 397–421. http://www.jstor.org/stable/40421043
+
+- Montero, J. R., Zmerli, S., & Newton, K. (2008). Confianza social, confianza política y satisfacción con la democracia. (Social Trust, Political Confidence, and Satisfaction with Democracy). Reis, 122, 11–54. https://doi.org/10.2307/40184879
+
+- Rivera, S. (2018). Confianza y participación política en América Latina. Revista Mexicana De Ciencias Políticas Y Sociales, 64(235). https://doi.org/10.22201/fcpys.2448492xe.2019.235.65728 
+
+- Reigadas, Cristina (2007). Asociaciones voluntarias y participación democrática en la Argentina. Revista Mad. Revista del Magíster en Análisis Sistémico Aplicado a la Sociedad,  (2),69-92. Disponible en:   https://www.redalyc.org/articulo.oa?id=311249719005
+
+- Carrascosa, J. (2021). Midiendo al capital social: aplicación del generador de posiciones en el Área Metropolitana de Buenos Aires. Revista Latinoamericana de Metodología de las Ciencias Sociales, 11(1), e088. https://doi.org/10.24215/18537863e088
+
+- Lin, N. & Dumin, M. (1986). Access to Occupations Through Social Ties. Social Networks, 8, 365–385.
+
+- Verhaeghe, P.-P. & Li, Y. (2015). The position generator approach to social capital research: measurements and results. En Y. Li (Ed.), The Handbook of Research Methods and Applications on Social Capital (pp. 166–186). Cheltenham: Edward Elgar Publishing.
+
+
+
+
+
+
+
+
